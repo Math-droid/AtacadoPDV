@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginTela));
             label2 = new Label();
             label3 = new Label();
-            button1 = new Button();
+            btn_acess = new Button();
             txt_User = new TextBox();
             txt_Senha = new TextBox();
             label1 = new Label();
@@ -60,15 +60,15 @@
             label3.TabIndex = 2;
             label3.Text = "Senha:";
             // 
-            // button1
+            // btn_acess
             // 
-            button1.Location = new Point(456, 172);
-            button1.Name = "button1";
-            button1.Size = new Size(228, 47);
-            button1.TabIndex = 3;
-            button1.Text = "Acessar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btn_acess.Location = new Point(456, 172);
+            btn_acess.Name = "btn_acess";
+            btn_acess.Size = new Size(228, 47);
+            btn_acess.TabIndex = 3;
+            btn_acess.Text = "Acessar";
+            btn_acess.UseVisualStyleBackColor = true;
+            btn_acess.Click += btn_acess_Click;
             // 
             // txt_User
             // 
@@ -76,6 +76,7 @@
             txt_User.Name = "txt_User";
             txt_User.Size = new Size(120, 23);
             txt_User.TabIndex = 4;
+            txt_User.Text = "admin";
             // 
             // txt_Senha
             // 
@@ -84,6 +85,7 @@
             txt_Senha.PasswordChar = '*';
             txt_Senha.Size = new Size(120, 23);
             txt_Senha.TabIndex = 5;
+            txt_Senha.Text = "123";
             // 
             // label1
             // 
@@ -119,6 +121,7 @@
             // 
             // LoginTela
             // 
+            AcceptButton = btn_acess;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(707, 329);
@@ -126,7 +129,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(txt_Senha);
             Controls.Add(txt_User);
-            Controls.Add(button1);
+            Controls.Add(btn_acess);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(label2);
@@ -144,7 +147,7 @@
 
         private Label label2;
         private Label label3;
-        private Button button1;
+        private Button btn_acess;
         private TextBox txt_User;
         private TextBox txt_Senha;
         private Label label1;

@@ -16,5 +16,23 @@ namespace AtacadoPDV.View
         {
             InitializeComponent();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void selecionarTudoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            //Instanciando a PDVTela
+
+            //tipo    objeto         classe
+            PDVTela pDVTela = new PDVTela();
+            //mostra a tela PDVTela 
+            // pDVTela é um objeto
+            pDVTela.Show();
+
+        }
     }
 }

@@ -18,22 +18,34 @@ namespace AtacadoPDV.View
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {  
+            //Para fechar a Aplicação
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_acess_Click(object sender, EventArgs e)
         {
+         //Variavel do tipo string que recebe da ferramenta TextBox
             string usuario = txt_User.Text;
             string senha = txt_Senha.Text;
-            if(senha == "123" && usuario == "admin")
+
+         //A verificação da credencial para permitir o acesso
+            if (senha == "123" && usuario == "admin")
             {
-                this.Visible = false;                                                                                   
+             //tornar esta (this) tela de login oculta (Hide)    
+                this.Hide();
+             //Instanciar ( é criar um Objeto) a tela de menu
                 MenuTela menu = new MenuTela();
-                menu.Show(this);
-            }else
+             // a tela menu ira fechar junto com a aplicação
+             // Porém, ira abrir a tela menu novamente.
+                menu.FormClosed += (s, args) => this.Close();
+                menu.Show();
+            }
+            else
             {
                 MessageBox.Show("Senha ou usuário incorretos, tente novamente");
+                txt_Senha.Clear();
+                txt_User.Clear();
             }
         }
     }
