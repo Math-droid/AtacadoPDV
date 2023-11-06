@@ -111,13 +111,7 @@ namespace AtacadoPDV.View
 
         private void bnt_final_Click(object sender, EventArgs e)
         {
-            if (total = 0)
-            {
-
-            }
-                
-                
-                TelaFecharVenda telafechar = new TelaFecharVenda();
+            TelaFecharVenda telafechar = new TelaFecharVenda();
             telafechar.Show();
         }
     }
