@@ -95,7 +95,7 @@ namespace AtacadoPDV.View
             // multiplica a quantidade pelo valor
             int val = Qtde * valor[codigo];
             total += val;
-            grid_prod.Rows.Add(itens[codigo], Qtde, un[codigo], valor[codigo], val);
+            grid_prod.Rows.Add(itens[codigo], Qtde, un[codigo], "R$"+valor[codigo]+",00", "R$"+val+",00");
             txb_valTo.Text = "R$" + total.ToString() + ",00";
 
         }
